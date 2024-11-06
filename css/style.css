@@ -1,0 +1,896 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+h1, h2, p {
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.5rem; /* Adjust font size if needed */
+    color: #333; /* Adjust text color */
+    font-weight: bold; /* Make the title bold */
+}
+
+/* Layout and Structure */
+header, footer, main {
+    text-align: center;
+    padding: 35px 20px;
+    margin: 30px 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8e8e8e;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+/* Navigation */
+/* General button styles */
+.nav-button, .skip-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the text */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Make text bold */
+    transition: background-color 0.3s, transform 0.2s ease; /* Smooth transition */
+    width: auto; /* Allow width to be auto by default */
+}
+
+/* Hover effect for buttons */
+.nav-button:hover, .skip-link:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Skip link positioning */
+.skip-link {
+    position: absolute;
+    top: -999px; /* Hide by default */
+    left: -999px; /* Hide by default */
+}
+
+.skip-link:focus {
+    top: 0; /* Position on screen when focused */
+    left: 0; /* Position on screen when focused */
+    z-index: 1000; /* Make sure it appears above other content */
+}
+
+/* Navbar styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align items in a row */
+}
+
+nav li {
+    margin-right: 10px; /* Space out navbar items */
+    flex-grow: 1; /* Ensure each navbar item grows equally */
+}
+
+nav {
+    background-color: #333; /* Dark background for the navbar */
+    padding: 10px; /* Add padding around the navbar */
+}
+
+nav a {
+    display: block; /* Make sure each link behaves like a block-level element */
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #1e1e1e; /* Same blue as buttons */
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center the text */
+    width: 100%; /* Allow the link to take up the full space of the container */
+}
+
+/* Hover effect for navbar links */
+nav a:hover {
+    background-color: #ddd; /* Darker blue on hover */
+}
+
+/* Mobile styling - flex items should take up equal space */
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+}
+
+nav li {
+    margin-right: 0;
+    margin-bottom: 10px; /* Space between stacked items on mobile */
+    flex-grow: 1; /* Ensures each item in the navbar grows to fill equal space */
+}
+
+/* Ensuring that the nav items behave responsively on any screen */
+nav a {
+    width: 100%; /* Make sure each item takes full width */
+    padding: 15px; /* Increase padding for better tap targets */
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Top Navigation Links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Top Navigation Hover Effect */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Content Styles */
+main {
+    padding: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+#summary * {
+    display: inline; /* Ensure everything displays inline */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove borders */
+    box-shadow: none; /* Remove shadow effects */
+}
+
+/* Additional styling for the summary text if needed */
+#summary {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px; /* Adjust max-width as needed */
+    font-size: 1rem; /* Adjust font size */
+    color: #333; /* Set text color */
+}
+
+#summary h2 {
+    display: block; /* Keep the header on a separate line */
+    margin-bottom: 10px; /* Add space below the header */
+    font-size: 1.5rem; /* Adjust font size if needed */
+    color: #333; /* Adjust text color */
+    font-weight: bold; /* Make the title bold */
+    text-align: center; /* Center the header */
+}
+
+/* Athlete Card */
+.athlete-card {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+
+}
+
+.athlete-section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    flex-direction: column; /* Stack on top of each other on mobile */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Athlete Styles */
+.athlete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    max-width: 100%;
+    justify-content: center;
+}
+
+/* Hover effect for athlete container */
+.athlete:hover {
+    background-color: #d4eeff;
+    transform: scale(1.05); /* Slight zoom in */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all effects */
+}
+
+/* Image styling */
+.athlete figure {
+    margin: 0;
+    flex-shrink: 0; /* Prevents the image from resizing too small */
+}
+
+.athlete img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Description list styling for athlete details */
+.athlete dl {
+    margin: 15px 0 0 0;
+    width: 100%;
+}
+
+/* Row layout for desktop (non-mobile screens) */
+@media (min-width: 600px) {
+    .athlete {
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 600px;
+    }
+
+    .athlete figure {
+        margin-right: 20px;
+    }
+
+    .athlete dl {
+        margin-top: 0;
+        text-align: left;
+    }
+}
+
+/* Highlight each row in the athlete details */
+.athlete dl dt,
+.athlete dl dd {
+    padding: 5px 0;
+}
+
+.athlete dl dt {
+    font-weight: bold;
+    color: #555;
+}
+
+.athlete dl dd {
+    margin: 0;
+    color: #333;
+}
+
+
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+    overflow-y: auto; /* Enables vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.athlete-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.athlete-table th,
+.athlete-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Prevents cell content from wrapping */
+}
+
+.athlete-table th {
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Positions it at the top of the table */
+    background-color: #007BFF; /* Header background color */
+    color: white; /* Header text color */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+/* Accessibility and Interactivity */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for the width of the link */
+    background-color: black;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Responsive Utility Classes */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-mobile {
+    display: none;
+}
+
+/* Progress Bar */
+.progress {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 70%;
+    background-color: #28a745;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* Collapsible Section */
+.collapsible {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.content {
+    display: none;
+    overflow: hidden;
+}
+
+.content.active {
+    display: block;
+}
+
+/* Centering Tables for Results */
+#team-results table,
+#individual-results table {
+    margin: auto; /* Centers the table on the page */
+    width: 80%; /* Optional: Adjust width as needed */
+}
+
+/* Center the data within each table cell */
+#team-results table td, #team-results table th,
+#individual-results table td, #individual-results table th {
+    text-align: center;
+    padding: 8px; /* Optional: Adds some padding for readability */
+}
+
+/* Centering Images, Figures, and Captions */
+.athlete figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Ensures text below image is centered */
+}
+
+/* Centering Info Section */
+.center-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Adds space between each entry for readability */
+    background-color: rgba(255, 255, 255, 0.8); /* Light white background with some transparency */
+    padding: 16px; /* Adds space around the content */
+    border-radius: 8px; /* Rounds the corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+}
+
+.center-info dl {
+    margin: 0;
+}
+
+.center-info dt {
+    font-weight: bold;
+    background-color: rgba(220, 220, 220, 0.8); /* Light grey background with some transparency */
+}
+
+.center-info dd {
+    margin: 0;
+}
+
+/* Athlete Header */
+.athlete-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8e8e8e;
+    color: white;
+}
+
+/* Records and Results Table */
+.records-table th, .results-table th,
+.records-table td, .results-table td {
+    padding: 10px;
+    border: 1px solid #ccc; /* Add borders for readability */
+    text-align: left;
+}
+
+/* Hover effect for table cells with a blurry border on all sides */
+#team-results table td:hover,
+#team-results table th:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Blurry border effect on all sides */
+    cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+}
+
+.records-table, .results-table {
+    width: 100%; /* Ensures full width */
+    border-collapse: collapse;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa; /* Default light background */
+    color: #212529; /* Default text color */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Additional Styles for Elements */
+main {
+    padding: 20px;
+}
+
+/* Tablet and above */
+@media (min-width: 768px) {
+    body {
+        font-size: 1.125rem; /* Adjust base font size */
+    }
+
+    .flex-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .skip-link {
+        top: -10px; /* Keeps it close to the top */
+    }
+
+    .hidden-mobile {
+        display: inline-block; /* Makes it visible on larger screens */
+    }
+
+    .collapsible {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+
+    .progress-bar {
+        width: 90%; /* Larger width for tablets */
+    }
+}
+
+/* Desktop (large screens) */
+@media (min-width: 992px) {
+    .athlete-container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .athlete-section {
+        flex-direction: row; /* Display side by side on larger screens */
+        flex-wrap: wrap; /* Allow cards to wrap if they overflow */
+        justify-content: center;
+    }
+
+    .athlete-card {
+        width: 40%; /* Set a fixed width on desktop */
+        margin: 10px; /* Space between cards */
+    
+    }
+
+    header, footer {
+        padding: 20px;
+        font-size: 1.2rem
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .progress-bar {
+        width: 100%; /* Max width for larger screens */
+    }
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Definea keyframes for hover animation */
+@keyframes hoverEffect {
+    0% {
+        background-color: #555; /* Starting background color */
+    }
+    100% {
+        background-color: #777; /* Ending background color */
+    }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212; /* Dark background */
+        color: #e0e0e0; /* Light text color */
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+    }
+
+    footer {
+        background-color: #1d1d1d;
+        color: #ddd;
+    }
+
+    p, h1, h2 {
+        color: #e0e0e0;
+    }
+        /* Change the title color in the summary section */
+    #summary h2 {
+        color: white; /* Set the title color to white in dark mode */
+    }
+    
+    /* Adjust the background of various elements for dark mode */
+    
+     /* Team Results and Athlete Section Tables */
+     .athlete-card,
+     .athlete,
+     .athlete-header,
+     footer {
+         background-color: #333; /* Set background to dark for readability */
+         color: white;
+         transition: background-color 0.5s ease-in-out; /* Smooth transition for background color */
+
+     }
+
+
+     .athlete dl dt{
+        color: white;
+    }
+
+    .athlete dl dd{
+        color: #e0e0e0;
+    }
+    .athlete:hover {
+        background-color: #6a6a6a;
+        background-color: #555; /* New background color */
+        transform: scale(1.05); /* Slight zoom in */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+        transition: all 0.3s ease-in-out; /* Smooth transition for all effects */
+
+    }
+    #team-results table td:hover,
+    #team-results table th:hover {
+        box-shadow: 0 0 10px rgba(212, 212, 212, 0.8); /* Blurry border effect on all sides */
+        cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+    }
+
+     .athlete-table,
+     #team-results table,
+     .athlete-section table {
+         background-color: #2c2c2c; /* Dark background for tables */
+         color: #e0e0e0; /* Light text color */
+         border: 1px solid #444; /* Lighter border */
+     }
+ 
+     .athlete-table th,
+     #team-results th,
+     .athlete-section th {
+         background-color: #333; /* Dark background for headers */
+         color: #fff; /* Light text color for headers */
+         border-bottom: 1px solid #444; /* Border at the bottom of headers */
+     }
+ 
+     .athlete-table td,
+     #team-results td,
+     .athlete-section td {
+         background-color: #2c2c2c; /* Dark background for table cells */
+         color: #e0e0e0; /* Light text color for table cells */
+         border-bottom: 1px solid #444; /* Border at the bottom of table cells */
+     }
+ 
+     .athlete-table tbody tr:nth-child(odd),
+     #team-results tbody tr:nth-child(odd),
+     .athlete-section tbody tr:nth-child(odd) {
+         background-color: #333; /* Darker background for odd rows */
+     }
+ 
+     .athlete-table tbody tr:nth-child(even),
+     #team-results tbody tr:nth-child(even),
+     .athlete-section tbody tr:nth-child(even) {
+         background-color: #444; /* Slightly lighter background for even rows */
+     }
+ 
+     .athlete-table tr:hover,
+     #team-results tr:hover,
+     .athlete-section tr:hover {
+         background-color: #555; /* Highlight on hover */
+         cursor: pointer; /* Pointer cursor for interactivity */
+     }
+ 
+     .athlete-table a,
+     #team-results a,
+     .athlete-section a {
+         color: #66aaff; /* Light blue links */
+     }
+ 
+     .athlete-table a:hover,
+     #team-results a:hover,
+     .athlete-section a:hover {
+         color: #80b3ff; /* Lighter blue on hover */
+     }
+    .center-info {
+        background-color: rgba(40, 40, 40, 0.8); /* Semi-transparent dark background */
+        color: white; /* Light text for readability */
+    }
+
+    .center-info dt {
+        background-color: rgba(60, 60, 60, 0.8); /* Darker background for dt */
+    }
+
+    .collapsible {
+        background-color: #444; /* Darken collapsible section */
+        border: 1px solid #666; /* Light border */
+    }
+
+    .collapsible:hover {
+        background-color: #555; /* Highlight collapsible section on hover */
+    }
+
+    /* Links */
+    nav a,
+    .topnav a {
+        color: #bbb; /* Lighter color for links */
+        background-color: black;
+    }
+
+    nav a:hover,
+    .topnav a:hover {
+        color: #fff; /* White text on hover for contrast */
+        background-color: #555;
+    }
+
+    /* Button Styles */
+    .progress-bar {
+        background-color: #28a745; /* Green for progress */
+    }
+    
+    .progress {
+        background-color: #444; /* Dark background for progress bar */
+    }
+}
+
+@media (prefers-contrast: more) {
+    body {
+        background-color: #000; /* High contrast black background */
+        color: #e5ff00; /* Bright white text */
+    }
+
+    header {
+        background-color: #151515; /* Dark background with better contrast */
+        color: #e5ff00; /* Light text */
+    }
+
+    footer {
+        background-color: #000000; /* High contrast footer background */
+        color: #e5ff00; /* Light text in footer */
+    }
+
+    p, h1, h2 {
+        color: #e5ff00; /* High contrast text */
+    }
+
+    /* Change the title color in the summary section */
+    #summary h2 {
+        color: #e5ff00; /* Set the title color to bright white in dark mode */
+    }
+
+    /* Adjust the background of various elements for high contrast */
+    /* Team Results and Athlete Section Tables */
+    .athlete-card,
+    .athlete,
+    .athlete-header,
+    footer {
+        background-color: #000000; /* Dark background with high contrast */
+        color: #e5ff00; /* Light text */
+    }
+
+    .athlete dl dt {
+        color: #e5ff00; /* White labels for better readability */
+    }
+
+    .athlete dl dd {
+        color: #e5ff00; /* Slightly lighter text for details */
+    }
+
+    .athlete:hover {
+        background-color: #2a2a2a; /* Lighter hover effect */
+        transform: scale(1.05); /* Slight zoom in */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+        transition: all 0.3s ease-in-out; /* Smooth transition for all effects */
+    }
+
+    #team-results table td:hover,
+    #team-results table th:hover {
+        box-shadow: 0 0 10px rgba(212, 212, 212, 0.8); /* Blurry border effect on all sides */
+        cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+    }
+
+    .athlete-table,
+    #team-results table,
+    .athlete-section table {
+        background-color: #151515; /* Dark background for tables */
+        color: #e5ff00; /* White text */
+        border: 1px solid #000000; /* Light border for clear separation */
+    }
+
+    .athlete-table th,
+    #team-results th,
+    .athlete-section th {
+        background-color: #151515; /* High contrast dark header */
+        color: #e5ff00; /* Light text for headers */
+        border-bottom: 2px solid #000000; /* Thicker border */
+    }
+
+    .athlete-table td,
+    #team-results td,
+    .athlete-section td {
+        background-color: #151515; /* Dark background for table cells */
+        color: #e5ff00; /* White text for cells */
+        border-bottom: 1px solid #000000; /* Light border at the bottom of cells */
+    }
+
+    .athlete-table tbody tr:nth-child(odd),
+    #team-results tbody tr:nth-child(odd),
+    .athlete-section tbody tr:nth-child(odd) {
+        background-color: #000000; /* Darker background for odd rows */
+    }
+
+    .athlete-table tbody tr:nth-child(even),
+    #team-results tbody tr:nth-child(even),
+    .athlete-section tbody tr:nth-child(even) {
+        background-color: #151515 /* Lighter background for even rows */
+    }
+
+    .athlete-table tr:hover,
+    #team-results tr:hover,
+    .athlete-section tr:hover {
+        background-color: white; /* High contrast hover highlight */
+        cursor: pointer; /* Pointer cursor for interactivity */
+    }
+
+    /* If you have any links or buttons in the tables */
+    .athlete-table a,
+    #team-results a,
+    .athlete-section a {
+        color: #00bfff; /* Bright cyan links for high visibility */
+    }
+
+    .athlete-table a:hover,
+    #team-results a:hover,
+    .athlete-section a:hover {
+        color: #1e90ff; /* Lighter cyan on hover for contrast */
+    }
+
+    .center-info {
+        background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent dark background for high contrast */
+        color: #e5ff00; /* Light text for readability */
+    }
+
+    .center-info dt {
+        background-color: rgba(0, 0, 0, 0.9); /* Darker background for dt */
+    }
+
+    .collapsible {
+        background-color: #333; /* Dark background for collapsible section */
+        border: 1px solid #555; /* Light border for better separation */
+    }
+
+    .collapsible:hover {
+        background-color: #444; /* Lighter hover background */
+    }
+
+    /* Links */
+    nav a,
+    .topnav a {
+        color: #e5ff00; /* High contrast links */
+        background-color: #000; /* Black background for links */
+    }
+
+    nav a:hover,
+    .topnav a:hover {
+        color: #000; /* Dark text on hover */
+        background-color: #e5ff00; /* White background on hover */
+    }
+
+    /* Button Styles */
+    .progress-bar {
+        background-color: #28a745; /* Green progress bar for high contrast */
+    }
+
+    .progress {
+        background-color: #333; /* Dark progress bar */
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* Disable animations and transitions */
+    #team-results table td:hover,
+    #team-results table th:hover {
+        box-shadow: none; /* Remove the box-shadow */
+        cursor: default; /* Set cursor to default (or remove pointer) */
+    }
+
+    .athlete:hover {
+        transform: none;
+        background-color: #f9f9f9; /* Remove hover background change */
+        box-shadow: none; /* Remove hover box shadow */
+    }
+
+    .progress-bar {
+        transition: none; /* Disable progress bar transition */
+    }
+
+    .athlete-card {
+        transition: none; /* Disable transition effects on athlete cards */
+    }
+
+    @keyframes hoverEffect {
+        from {
+            background-color: #555;
+        }
+        to {
+            background-color: #555; /* Keep the background color consistent */
+        }
+    }
+}

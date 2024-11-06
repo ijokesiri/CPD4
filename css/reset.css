@@ -1,0 +1,53 @@
+/* Remove default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Set a consistent font size and family */
+body {
+    font-size: 100%; /* This is often 16px by default in most browsers */
+    font-family: Arial, sans-serif; /* Choose a generic font */
+    line-height: 1.5; /* Improved readability */
+}
+
+/* Remove list styles */
+ul, ol {
+    list-style: none; /* Remove bullets and numbers */
+}
+
+/* Remove default link styling */
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+/* Remove table borders */
+table {
+    border-collapse: collapse; /* Collapse table borders */
+    width: 100%; /* Ensure tables are full-width */
+}
+
+/* Reset form elements */
+input, textarea, select, button {
+    font-family: inherit; /* Ensure consistency in font styling */
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Reset default heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal; /* Remove bold by default */
+}
+
+/* Make sure images are responsive */
+img {
+    max-width: 100%; /* Ensure images scale with their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Set a consistent background color */
+body {
+    background-color: #f8f8f8; /* Light gray background */
+}
