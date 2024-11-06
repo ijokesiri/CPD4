@@ -188,6 +188,7 @@ p {
 }
 
 /* Athlete Card */
+
 .athlete-card {
     width: 90%;
     margin: 10px auto;
@@ -195,6 +196,7 @@ p {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: white;
+    justify-content: center;
 
 }
 
@@ -221,7 +223,10 @@ p {
     transition: background-color 0.3s ease;
     max-width: 100%;
     justify-content: center;
+
 }
+
+
 
 /* Hover effect for athlete container */
 .athlete:hover {
@@ -873,7 +878,7 @@ body {
 
     .athlete:hover {
         transform: none;
-        background-color: #f9f9f9; /* Remove hover background change */
+        background-color: #2f2f2f; /* Remove hover background change */
         box-shadow: none; /* Remove hover box shadow */
     }
 
@@ -883,6 +888,7 @@ body {
 
     .athlete-card {
         transition: none; /* Disable transition effects on athlete cards */
+
     }
 
     @keyframes hoverEffect {
