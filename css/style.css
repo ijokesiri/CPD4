@@ -228,7 +228,7 @@ p {
     border-radius: 5px;
     background-color: white;
     justify-content: center;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(30px); /* Start from a lower position */
     transition: opacity 2.0s ease-out, transform 2.0s ease-out; /* Smooth transition */
 
