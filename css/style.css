@@ -35,7 +35,7 @@ h2{
 }
 
 .meets-list li a {
-    color: #007bff; /* Blue link color */
+    color: #002c5c; /* Blue link color */
     text-decoration: none;
     font-size: 1.2em;
     display: block;
@@ -44,7 +44,7 @@ h2{
 
 /* Hover effect for links */
 .meets-list li a:hover {
-    color: #0056b3; /* Darker blue */
+    color: #001123; /* Darker blue */
     text-decoration: underline;
 }
 
@@ -618,7 +618,7 @@ body {
 .photo-section .file-label {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: #012750;
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
@@ -632,7 +632,7 @@ body {
 /* Upload Button Styling */
 .photo-section button[type="submit"] {
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #004b11;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -668,7 +668,7 @@ body {
 .print-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50; /* Green button color */
+    background-color: #004d03; /* Green button color */
     color: white;
     text-decoration: none; /* Remove underline */
     border-radius: 5px;
@@ -682,7 +682,7 @@ body {
 }
 
 .print-link:active {
-    background-color: #388e3c; /* Even darker green when clicked */
+    background-color: #003503; /* Even darker green when clicked */
 }
 
 /* Definea keyframes for hover animation */
