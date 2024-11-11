@@ -60,7 +60,7 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: #8e8e8e;
-    background-image: url('/IMG_0465.jpg');
+    background-image: url('IMG_0465.jpg');
     background-size: cover;
     background-position: top; /* Positions the background image to show the top */
     background-repeat: no-repeat;
