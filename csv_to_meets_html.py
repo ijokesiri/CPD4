@@ -110,6 +110,7 @@ def csv_to_html(csv_filename, output_folder):
             </dl>
         </div>
     </div>
+
 </section>
 """
 
@@ -121,7 +122,23 @@ def csv_to_html(csv_filename, output_folder):
         html_content += create_meet_image_gallery(link_url)
         # Close the HTML document
         html_content += """
+    <script src="/js/scripts.js"></script>
    </section>
+       <div class="photo-section"> 
+            <h3>Favorite Photos</h3>
+            <p>Upload your favorite moments from this meet below:</p>
+            <form method="POST" action="#" enctype="multipart/form-data">
+                <label for="photo-upload" class="file-label">Choose a photo to upload:</label>
+                <input type="file" id="photo-upload" name="photo" accept="image/*">
+                <button type="submit">Upload Photo</button>
+            </form>
+        </div>
+        <div class="print-option">
+            <h3>Printable Version</h3>
+            <p>For a clean, printable version of the meet results, 
+                <a href="#" onclick="window.print()" class="print-link">click here</a>.
+            </p>
+        </div>
    </main>   
    <footer>
                      <p>
@@ -271,7 +288,7 @@ def generate_meets_list_page():
     <main>
     <div id="main-content">
         <h2>List of Meets</h2>
-        <ul>
+        <ul class="meets-list">
 '''
 
     meets_folder = 'meets'
