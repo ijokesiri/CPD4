@@ -122,7 +122,7 @@ def csv_to_html(csv_filename, output_folder):
         html_content += create_meet_image_gallery(link_url)
         # Close the HTML document
         html_content += """
-    <script src="./js/scripts.js" defer></script>
+    <script src="./js/scripts.js"></script>
    </section>
        <div class="photo-section"> 
             <h3>Favorite Photos</h3>
